@@ -1,0 +1,20 @@
+https://reqbin.com/curl - открыть сайт для удобства тестирования (если проверять через cmd - возможны проблемы)
+
+//получение Токена
+curl -X POST http://localhost:8187/auth -H "Content-Type: application/json" -d '{"name":"Danil","password":"123"}'
+
+//получение Токена - нет такого юезар Incorrect username or password
+curl -X POST http://localhost:8187/auth -H "Content-Type: application/json" -d '{"name":"Danil","password":"123"}'
+
+//добавление сообщения (сперва скопируйте полученный токен, пример Bearer_eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiRGFuaWwiLCJpYXQiOjE2NTEwNjE4ODQsImV4cCI6MTY1MTA2NTQ4NH0.Z0HjdPx-kFXa-WHYobAH9DSYs4b8xmGz0PJ5BfBrovI - что-то вроде такого)
+curl -X POST http://localhost:8187/api/v1/message -H "Content-Type: application/json" -H "Authorization: Bearer_<введите полученный токен>" -d '{"name":"Danil","message":"123"}'
+
+//получение последних 10 сообщений (про токен не забудьте)
+curl -X POST http://localhost:8187/api/v1/message -H "Content-Type: application/json" -H "Authorization: Bearer_<введите полученный токен>" -d '{"name":"Danil","message":"history 10"}'
+
+
+
+
+
+
+
