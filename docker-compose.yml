@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  api_service:
+    build: .
+    restart: always
+    ports:
+      - 8187:8187
+    depends_on:
+      - postgres_db
+    links:
+      - postgres_db:postgres
+  postgres_db:
+    image: "postgres:13.3"
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_PASSWORD: postgres
