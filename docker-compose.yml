@@ -1,10 +1,11 @@
 version: "3.7"
 services:
   api_service:
-    build: .
+    image: "ballack17/testinside_api_service:latest"
     restart: always
+    ports:
+      - 8187:8187
     environment:
-      - PORT=8187
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres/postgres
     depends_on:
       - postgres
