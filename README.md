@@ -6,8 +6,7 @@
 
 Для удобства собранный файл находится в папке "mainapp" (это на тот случай если у вас на ПК не установлены переменные среды JAVA_HOME)
 В одноу папку необходимо скопировать mainapp, файлы docker-compose.yml и Dockerfile - если вы копируете весь проект, то все файлы уже находятся в нужном месте.
-открываете терминал в папке проекта и вводите
-скачиваете докер образ docker push ballack17/testinside_api_service:tagname
+скачиваете докер образ введя команду docker push ballack17/testinside_api_service:tagname
 либо можно самому создать образ используя команду docker build -t ballack17/testinside_api_service .
 docker-compose up   / в докере у вас запустится приложение вместе с базой данных необходимой для работы
 
