@@ -16,6 +16,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 /**
+ * Прокси для ГБ
  * класс генерации Токена и работы с ним
  * */
 
